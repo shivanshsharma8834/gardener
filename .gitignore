@@ -1,3 +1,4 @@
 .env*
 
 */mcp-server.log
+*/__pycache__

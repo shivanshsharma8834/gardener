@@ -6206,3 +6206,273 @@ BOTTOM: To carry the band
 2025-08-10 14:07:35,204 - INFO - HTTP Request: GET https://i.imgflip.com/a2oupc.jpg "HTTP/1.1 200 OK"
 2025-08-10 14:07:35,299 - INFO - Meme image downloaded and converted to base64
 2025-08-10 14:07:44,290 - INFO - Terminating session: 4711006933264ae482e60de86fdb815b
+2025-08-10 16:32:09,030 - INFO - Loading environment variables...
+2025-08-10 16:32:09,033 - INFO - Environment variables loaded successfully
+2025-08-10 16:32:09,225 - ERROR - Failed to register F1 tool 'get_next_race': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,225 - ERROR - Failed to register F1 tool 'get_current_standings': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,226 - ERROR - Failed to register F1 tool 'get_race_schedule': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,226 - ERROR - Failed to register F1 tool 'get_latest_race_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,226 - ERROR - Failed to register F1 tool 'f1_trivia': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,227 - ERROR - Failed to register F1 tool 'get_historical_schedule': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,227 - ERROR - Failed to register F1 tool 'get_constructor_standings': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,227 - ERROR - Failed to register F1 tool 'get_driver_profile': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,227 - ERROR - Failed to register F1 tool 'get_driver_season_performance': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,228 - ERROR - Failed to register F1 tool 'get_race_analysis': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,228 - ERROR - Failed to register F1 tool 'get_qualifying_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,228 - ERROR - Failed to register F1 tool 'compare_drivers': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,229 - ERROR - Failed to register F1 tool 'get_all_seasons': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,229 - ERROR - Failed to register F1 tool 'get_all_circuits': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,229 - ERROR - Failed to register F1 tool 'get_current_drivers': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,230 - ERROR - Failed to register F1 tool 'get_current_constructors': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,230 - ERROR - Failed to register F1 tool 'get_sprint_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,230 - ERROR - Failed to register F1 tool 'get_pitstops': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,230 - ERROR - Failed to register F1 tool 'get_lap_times': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,230 - ERROR - Failed to register F1 tool 'get_status_codes': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:32:09,231 - WARNING - No F1 tools were registered
+2025-08-10 16:32:09,244 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:32:09,244 - INFO - Available tools:
+2025-08-10 16:32:09,245 - INFO -   - validate() - Authentication tool
+2025-08-10 16:32:09,245 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:32:09,245 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:32:09,245 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:32:09,246 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:32:09,246 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:32:09,402 - INFO - StreamableHTTP session manager started
+2025-08-10 16:32:09,404 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:32:40,648 - INFO - Loading environment variables...
+2025-08-10 16:32:40,653 - INFO - Environment variables loaded successfully
+2025-08-10 16:32:40,727 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:32:40,727 - INFO - Available tools:
+2025-08-10 16:32:40,727 - INFO -   - validate() - Authentication tool
+2025-08-10 16:32:40,727 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:32:40,728 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:32:40,728 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:32:40,728 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:32:40,729 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:32:40,818 - INFO - StreamableHTTP session manager started
+2025-08-10 16:32:40,820 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:32:56,047 - INFO - Loading environment variables...
+2025-08-10 16:32:56,050 - INFO - Environment variables loaded successfully
+2025-08-10 16:32:56,104 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:32:56,105 - INFO - Available tools:
+2025-08-10 16:32:56,105 - INFO -   - validate() - Authentication tool
+2025-08-10 16:32:56,105 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:32:56,105 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:32:56,105 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:32:56,105 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:32:56,106 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:32:56,190 - INFO - StreamableHTTP session manager started
+2025-08-10 16:32:56,191 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:33:06,988 - INFO - Loading environment variables...
+2025-08-10 16:33:06,991 - INFO - Environment variables loaded successfully
+2025-08-10 16:33:07,028 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:33:07,028 - INFO - Available tools:
+2025-08-10 16:33:07,028 - INFO -   - validate() - Authentication tool
+2025-08-10 16:33:07,028 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:33:07,029 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:33:07,029 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:33:07,029 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:33:07,029 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:33:07,120 - INFO - StreamableHTTP session manager started
+2025-08-10 16:33:13,793 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:33:15,962 - INFO - Loading environment variables...
+2025-08-10 16:33:15,965 - INFO - Environment variables loaded successfully
+2025-08-10 16:33:16,125 - ERROR - Failed to register F1 tool 'get_next_race': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,125 - ERROR - Failed to register F1 tool 'get_current_standings': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,126 - ERROR - Failed to register F1 tool 'get_race_schedule': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,126 - ERROR - Failed to register F1 tool 'get_latest_race_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,126 - ERROR - Failed to register F1 tool 'f1_trivia': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,127 - ERROR - Failed to register F1 tool 'get_historical_schedule': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,127 - ERROR - Failed to register F1 tool 'get_constructor_standings': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,127 - ERROR - Failed to register F1 tool 'get_driver_profile': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,128 - ERROR - Failed to register F1 tool 'get_driver_season_performance': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,128 - ERROR - Failed to register F1 tool 'get_race_analysis': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,128 - ERROR - Failed to register F1 tool 'get_qualifying_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,128 - ERROR - Failed to register F1 tool 'compare_drivers': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,129 - ERROR - Failed to register F1 tool 'get_all_seasons': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,129 - ERROR - Failed to register F1 tool 'get_all_circuits': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,129 - ERROR - Failed to register F1 tool 'get_current_drivers': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,129 - ERROR - Failed to register F1 tool 'get_current_constructors': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,129 - ERROR - Failed to register F1 tool 'get_sprint_results': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,130 - ERROR - Failed to register F1 tool 'get_pitstops': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,130 - ERROR - Failed to register F1 tool 'get_lap_times': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,130 - ERROR - Failed to register F1 tool 'get_status_codes': First argument to @tool must be a function, string, or None, got <class 'fastmcp.tools.tool.FunctionTool'>
+2025-08-10 16:33:16,130 - WARNING - No F1 tools were registered
+2025-08-10 16:33:16,142 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:33:16,142 - INFO - Available tools:
+2025-08-10 16:33:16,142 - INFO -   - validate() - Authentication tool
+2025-08-10 16:33:16,142 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:33:16,142 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:33:16,142 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:33:16,142 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:33:16,142 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:33:16,229 - INFO - StreamableHTTP session manager started
+2025-08-10 16:37:24,663 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:37:27,530 - INFO - Loading environment variables...
+2025-08-10 16:37:27,533 - INFO - Environment variables loaded successfully
+2025-08-10 16:37:27,674 - INFO - F1 module imported successfully for tool forwarding
+2025-08-10 16:37:27,709 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:37:27,710 - INFO - Available tools:
+2025-08-10 16:37:27,710 - INFO -   - validate() - Authentication tool
+2025-08-10 16:37:27,710 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:37:27,711 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:37:27,712 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:37:27,712 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:37:27,712 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:37:27,849 - INFO - StreamableHTTP session manager started
+2025-08-10 16:38:31,981 - INFO - Created new transport with session ID: c059ebf28b964f23aeeda6ca2d2b1d66
+2025-08-10 16:38:32,515 - INFO - Processing request of type ListToolsRequest
+2025-08-10 16:38:33,106 - INFO - Processing request of type CallToolRequest
+2025-08-10 16:38:33,107 - INFO - Tool called: validate()
+2025-08-10 16:38:33,107 - INFO - Returning MY_NUMBER: 919455646486
+2025-08-10 16:38:33,260 - INFO - Terminating session: c059ebf28b964f23aeeda6ca2d2b1d66
+2025-08-10 16:38:52,057 - INFO - Created new transport with session ID: 213c25868427483a9823644538820548
+2025-08-10 16:38:52,733 - INFO - Processing request of type ListToolsRequest
+2025-08-10 16:39:11,176 - INFO - Terminating session: 213c25868427483a9823644538820548
+2025-08-10 16:46:50,187 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 16:46:52,766 - INFO - Loading environment variables...
+2025-08-10 16:46:52,768 - INFO - Environment variables loaded successfully
+2025-08-10 16:46:52,878 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 16:46:52,878 - INFO - Available tools:
+2025-08-10 16:46:52,878 - INFO -   - validate() - Authentication tool
+2025-08-10 16:46:52,878 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 16:46:52,879 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 16:46:52,879 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 16:46:52,879 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 16:46:52,879 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 16:46:52,880 - INFO -   - F1 tools: get_next_race, get_current_standings, get_race_schedule, get_latest_race_results, f1_trivia, get_historical_schedule, get_constructor_standings, get_driver_profile, get_driver_season_performance, get_race_analysis, get_qualifying_results, compare_drivers, get_all_seasons, get_all_circuits, get_current_drivers, get_current_constructors, get_sprint_results, get_pitstops, get_lap_times, get_status_codes
+2025-08-10 16:46:52,981 - INFO - StreamableHTTP session manager started
+2025-08-10 17:08:03,055 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 17:08:05,246 - INFO - Loading environment variables...
+2025-08-10 17:08:05,248 - INFO - Environment variables loaded successfully
+2025-08-10 17:08:05,338 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 17:08:05,339 - INFO - Available tools:
+2025-08-10 17:08:05,339 - INFO -   - validate() - Authentication tool
+2025-08-10 17:08:05,339 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 17:08:05,340 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 17:08:05,340 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 17:08:05,340 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 17:08:05,340 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 17:08:05,341 - INFO -   - F1 tools: get_next_race, get_current_standings, get_race_schedule, get_latest_race_results, f1_trivia, get_historical_schedule, get_constructor_standings, get_driver_profile, get_driver_season_performance, get_race_analysis, get_qualifying_results, compare_drivers, get_all_seasons, get_all_circuits, get_current_drivers, get_current_constructors, get_sprint_results, get_pitstops, get_lap_times, get_status_codes
+2025-08-10 17:08:05,427 - INFO - StreamableHTTP session manager started
+2025-08-10 17:08:23,542 - INFO - Created new transport with session ID: da22bd16c67a4eeb90f4598f23325b0d
+2025-08-10 17:08:24,274 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:08:42,406 - INFO - Terminating session: da22bd16c67a4eeb90f4598f23325b0d
+2025-08-10 17:11:45,526 - INFO - StreamableHTTP session manager shutting down
+2025-08-10 17:11:47,871 - INFO - Loading environment variables...
+2025-08-10 17:11:47,873 - INFO - Environment variables loaded successfully
+2025-08-10 17:11:47,977 - INFO - Starting MCP server on http://0.0.0.0:8086
+2025-08-10 17:11:47,978 - INFO - Available tools:
+2025-08-10 17:11:47,979 - INFO -   - validate() - Authentication tool
+2025-08-10 17:11:47,979 - INFO -   - job_finder() - Job analysis and search
+2025-08-10 17:11:47,979 - INFO -   - create_imgflip_meme() - Create memes using Imgflip templates
+2025-08-10 17:11:47,980 - INFO -   - screenshot_meme_generator() - Analyze screenshots and create memes
+2025-08-10 17:11:47,980 - INFO -   - make_img_black_and_white() - Image conversion
+2025-08-10 17:11:47,980 - INFO -   - add_caption_to_image() - Enhanced meme creation with AI
+2025-08-10 17:11:48,065 - INFO - StreamableHTTP session manager started
+2025-08-10 17:13:01,846 - INFO - Created new transport with session ID: 7a5343d8c000494cb91cb6333a0a7af5
+2025-08-10 17:13:02,287 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:13:10,718 - INFO - Processing request of type CallToolRequest
+2025-08-10 17:13:10,724 - INFO - Tool called: add_caption_to_image()
+2025-08-10 17:13:10,724 - INFO - Image data length: 407160 characters
+2025-08-10 17:13:10,725 - INFO - Top caption: meri chut mat maar
+2025-08-10 17:13:10,725 - INFO - Bottom caption: None
+2025-08-10 17:13:10,725 - INFO - Font size: 40
+2025-08-10 17:13:10,725 - INFO - Text color: white
+2025-08-10 17:13:10,725 - INFO - Stroke color: black
+2025-08-10 17:13:10,726 - INFO - Stroke width: 3
+2025-08-10 17:13:10,726 - INFO - Hinglish support: False
+2025-08-10 17:13:11,744 - INFO - Setting up Gemini API...
+2025-08-10 17:13:11,745 - INFO - Gemini API key found
+2025-08-10 17:13:12,464 - INFO - Gemini client created successfully
+2025-08-10 17:13:12,465 - INFO - Decoding base64 image data...
+2025-08-10 17:13:12,466 - INFO - Decoded image size: 305370 bytes
+2025-08-10 17:13:12,467 - INFO - Opening image with PIL...
+2025-08-10 17:13:12,523 - INFO - Image dimensions: (516, 687)
+2025-08-10 17:13:12,523 - INFO - Image already in RGB format
+2025-08-10 17:13:12,523 - INFO - User provided captions, using them directly
+2025-08-10 17:13:12,524 - INFO - Normalizing captions to ALL CAPS and setting up drawing...
+2025-08-10 17:13:12,524 - INFO - Setting up image drawing...
+2025-08-10 17:13:12,532 - INFO - Image dimensions: 516x687
+2025-08-10 17:13:12,533 - INFO - Preparing bold font loader and auto-fit helpers...
+2025-08-10 17:13:12,533 - INFO - Adding top caption: 'MERI CHUT MAT MAAR'
+2025-08-10 17:13:12,535 - INFO - Top caption position: (33, 20)
+2025-08-10 17:13:12,569 - INFO - Top caption added
+2025-08-10 17:13:12,570 - INFO - Saving final image...
+2025-08-10 17:13:12,605 - INFO - Final image size: 376588 characters
+2025-08-10 17:13:12,606 - INFO - Image captioning completed successfully
+2025-08-10 17:13:22,802 - INFO - Terminating session: 7a5343d8c000494cb91cb6333a0a7af5
+2025-08-10 17:18:22,060 - INFO - Created new transport with session ID: b33149e697ee4e49824a7d91fa248523
+2025-08-10 17:18:22,610 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:18:23,069 - INFO - Terminating session: b33149e697ee4e49824a7d91fa248523
+2025-08-10 17:18:23,268 - INFO - Created new transport with session ID: 835ee3ea3edd468abc2643a58dd0210b
+2025-08-10 17:18:23,597 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:18:23,784 - INFO - Terminating session: 835ee3ea3edd468abc2643a58dd0210b
+2025-08-10 17:19:33,384 - INFO - Created new transport with session ID: d658c9d663db40649a208a4812a55ff4
+2025-08-10 17:19:33,763 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:19:38,163 - INFO - Terminating session: d658c9d663db40649a208a4812a55ff4
+2025-08-10 17:20:12,213 - INFO - Created new transport with session ID: 2b1b77d864ee4e68994a0aac85dcb1b2
+2025-08-10 17:20:12,669 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:20:22,318 - INFO - Processing request of type CallToolRequest
+2025-08-10 17:20:22,324 - INFO - Tool called: add_caption_to_image()
+2025-08-10 17:20:22,325 - INFO - Image data length: 1753984 characters
+2025-08-10 17:20:22,325 - INFO - Top caption: meri chut mat maaro
+2025-08-10 17:20:22,325 - INFO - Bottom caption: None
+2025-08-10 17:20:22,325 - INFO - Font size: 40
+2025-08-10 17:20:22,326 - INFO - Text color: white
+2025-08-10 17:20:22,326 - INFO - Stroke color: black
+2025-08-10 17:20:22,326 - INFO - Stroke width: 3
+2025-08-10 17:20:22,326 - INFO - Hinglish support: False
+2025-08-10 17:20:22,326 - INFO - Setting up Gemini API...
+2025-08-10 17:20:22,326 - INFO - Gemini API key found
+2025-08-10 17:20:23,002 - INFO - Gemini client created successfully
+2025-08-10 17:20:23,003 - INFO - Decoding base64 image data...
+2025-08-10 17:20:23,008 - INFO - Decoded image size: 1315488 bytes
+2025-08-10 17:20:23,009 - INFO - Opening image with PIL...
+2025-08-10 17:20:23,009 - INFO - Image dimensions: (1600, 1200)
+2025-08-10 17:20:23,009 - INFO - Image already in RGB format
+2025-08-10 17:20:23,009 - INFO - User provided captions, using them directly
+2025-08-10 17:20:23,009 - INFO - Normalizing captions to ALL CAPS and setting up drawing...
+2025-08-10 17:20:23,010 - INFO - Setting up image drawing...
+2025-08-10 17:20:23,047 - INFO - Image dimensions: 1600x1200
+2025-08-10 17:20:23,048 - INFO - Preparing bold font loader and auto-fit helpers...
+2025-08-10 17:20:23,048 - INFO - Adding top caption: 'MERI CHUT MAT MAARO'
+2025-08-10 17:20:23,050 - INFO - Top caption position: (559, 20)
+2025-08-10 17:20:23,079 - INFO - Top caption added
+2025-08-10 17:20:23,079 - INFO - Saving final image...
+2025-08-10 17:20:23,236 - INFO - Final image size: 1621168 characters
+2025-08-10 17:20:23,237 - INFO - Image captioning completed successfully
+2025-08-10 17:20:45,627 - INFO - Terminating session: 2b1b77d864ee4e68994a0aac85dcb1b2
+2025-08-10 17:39:43,962 - INFO - Created new transport with session ID: 28758973526746769810ae505a0ad3f1
+2025-08-10 17:39:44,264 - INFO - Processing request of type ListToolsRequest
+2025-08-10 17:39:51,212 - INFO - Processing request of type CallToolRequest
+2025-08-10 17:39:51,225 - INFO - Tool called: add_caption_to_image()
+2025-08-10 17:39:51,225 - INFO - Image data length: 648512 characters
+2025-08-10 17:39:51,225 - INFO - Top caption: When PuchAI gets feedback...
+2025-08-10 17:39:51,303 - INFO - Font size: 40
+2025-08-10 17:39:51,303 - INFO - Text color: white
+2025-08-10 17:39:51,303 - INFO - Stroke color: black
+2025-08-10 17:39:51,303 - INFO - Stroke width: 3
+2025-08-10 17:39:51,303 - INFO - Hinglish support: True
+2025-08-10 17:39:51,304 - INFO - Setting up Gemini API...
+2025-08-10 17:39:51,304 - INFO - Gemini API key found
+2025-08-10 17:39:52,020 - INFO - Gemini client created successfully
+2025-08-10 17:39:52,020 - INFO - Decoding base64 image data...
+2025-08-10 17:39:52,023 - INFO - Decoded image size: 486384 bytes
+2025-08-10 17:39:52,023 - INFO - Opening image with PIL...
+2025-08-10 17:39:52,024 - INFO - Image dimensions: (1356, 1034)
+2025-08-10 17:39:52,024 - INFO - Image already in RGB format
+2025-08-10 17:39:52,024 - INFO - User provided captions, using them directly
+2025-08-10 17:39:52,025 - INFO - Normalizing captions to ALL CAPS and setting up drawing...
+2025-08-10 17:39:52,025 - INFO - Setting up image drawing...
+2025-08-10 17:39:52,046 - INFO - Image dimensions: 1356x1034
+2025-08-10 17:39:52,046 - INFO - Preparing bold font loader and auto-fit helpers...
+2025-08-10 17:39:52,047 - INFO - Adding top caption: 'WHEN PUCHAI GETS FEEDBACK...'
+2025-08-10 17:39:52,050 - INFO - Top caption position: (340, 20)
+2025-08-10 17:39:52,093 - INFO - Top caption added
+2025-08-10 17:39:52,099 - INFO - Bottom caption position: (471, 985)
+2025-08-10 17:39:52,122 - INFO - Bottom caption added
+2025-08-10 17:39:52,122 - INFO - Saving final image...
+2025-08-10 17:39:52,191 - INFO - Final image size: 683572 characters
+2025-08-10 17:39:52,192 - INFO - Image captioning completed successfully
+2025-08-10 17:40:02,516 - INFO - Terminating session: 28758973526746769810ae505a0ad3f1

@@ -288,6 +288,8 @@ class Fetch:
 
     @classmethod
     async def fetch_url(
+        cls,
+        url: str,
         user_agent: str,
         force_raw: bool = False,
     ) -> tuple[str, str]:
@@ -306,8 +308,8 @@ class Fetch:
                 raise McpError(ErrorData(code=INTERNAL_ERROR, message=f"Failed to fetch {url} - status code {response.status_code}"))
 
             page_raw = response.text
+            content_type = response.headers.get("content-type", "")
 
-        content_type = response.headers.get("content-type", "")
         is_page_html = "text/html" in content_type
 
         if is_page_html and not force_raw:
@@ -1599,9 +1601,19 @@ async def add_caption_to_image(
             logger.info("User provided captions, using them directly")
             # User provided captions, use them as-is
         
+        logger.info("Normalizing captions to ALL CAPS and setting up drawing...")
+        # Force ALL CAPS for stronger meme styling
+        if top_caption:
+            top_caption = top_caption.upper()
+        if bottom_caption:
+            bottom_caption = bottom_caption.upper()
+
         logger.info("Setting up image drawing...")
         # Create a drawing object
         draw = ImageDraw.Draw(image)
+        # Ensure image dimensions are available early
+        img_width, img_height = image.size
+        logger.info(f"Image dimensions: {img_width}x{img_height}")
         
         # Accessibility features
         if accessibility_mode:
@@ -1671,23 +1683,48 @@ async def add_caption_to_image(
                 stroke_color = "white"
             stroke_width = max(5, stroke_width)
         
-        # Try to load a default font, fallback to default if not available
-        logger.info("Loading font...")
-        try:
-            # Try to use a larger font for better visibility
-            font = ImageFont.truetype("arial.ttf", font_size)
-            logger.info("Loaded Arial font")
-        except (OSError, IOError):
+        # Helpers: load bold font and fit text to width
+        logger.info("Preparing bold font loader and auto-fit helpers...")
+
+        def load_bold_font(desired_size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+            font_candidates = [
+                # Windows common
+                "C:/Windows/Fonts/arialbd.ttf",
+                "C:/Windows/Fonts/ARIALBD.TTF",
+                # Linux common
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                # macOS common
+                "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+                "/System/Library/Fonts/Supplemental/HelveticaNeue.ttc",
+                # Generic names for PIL to resolve if available in cwd
+                "arialbd.ttf",
+                "DejaVuSans-Bold.ttf",
+            ]
+            for path in font_candidates:
+                try:
+                    return ImageFont.truetype(path, desired_size)
+                except (OSError, IOError):
+                    continue
+            # Fallback to Arial regular, then PIL default
             try:
-                font = ImageFont.truetype("/System/Library/Fonts/Arial.ttf", font_size)
-                logger.info("Loaded system Arial font")
+                return ImageFont.truetype("arial.ttf", desired_size)
             except (OSError, IOError):
-                font = ImageFont.load_default()
-                logger.info("Using default font")
+                return ImageFont.load_default()
+
+        def fit_font_to_width(text: str, max_width: int, start_size: int) -> ImageFont.ImageFont:
+            size = max(10, start_size)
+            font_local = load_bold_font(size)
+            # If too wide, decrease until fits or minimum size
+            bbox = draw.textbbox((0, 0), text, font=font_local)
+            text_width = bbox[2] - bbox[0]
+            while text_width > max_width and size > 10:
+                size = max(10, int(size * 0.9))
+                font_local = load_bold_font(size)
+                bbox = draw.textbbox((0, 0), text, font=font_local)
+                text_width = bbox[2] - bbox[0]
+            return font_local
         
-        # Get image dimensions
-        img_width, img_height = image.size
-        logger.info(f"Image dimensions: {img_width}x{img_height}")
+        # Image dimensions already computed above
         
         # Helper function to draw text with stroke and accessibility features
         def draw_text_with_stroke(text, position, font, fill_color, stroke_color, stroke_width):
@@ -1729,8 +1766,11 @@ async def add_caption_to_image(
         # Add top caption if provided
         if top_caption:
             logger.info(f"Adding top caption: '{top_caption}'")
+            # Auto-fit bold font to image width
+            max_text_width = int(img_width * 0.9)
+            font_top = fit_font_to_width(top_caption, max_text_width, font_size)
             # Get text size
-            bbox = draw.textbbox((0, 0), top_caption, font=font)
+            bbox = draw.textbbox((0, 0), top_caption, font=font_top)
             text_width = bbox[2] - bbox[0]
             text_height = bbox[3] - bbox[1]
             
@@ -1739,14 +1779,17 @@ async def add_caption_to_image(
             y = 20  # 20 pixels from top
             logger.info(f"Top caption position: ({x}, {y})")
             
-            draw_text_with_stroke(top_caption, (x, y), font, text_color, stroke_color, stroke_width)
+            draw_text_with_stroke(top_caption, (x, y), font_top, text_color, stroke_color, stroke_width)
             logger.info("Top caption added")
         
         # Add bottom caption if provided
         if bottom_caption:
             logger.info(f"Adding bottom caption: '{bottom_caption}'")
+            # Auto-fit bold font to image width
+            max_text_width = int(img_width * 0.9)
+            font_bottom = fit_font_to_width(bottom_caption, max_text_width, font_size)
             # Get text size
-            bbox = draw.textbbox((0, 0), bottom_caption, font=font)
+            bbox = draw.textbbox((0, 0), bottom_caption, font=font_bottom)
             text_width = bbox[2] - bbox[0]
             text_height = bbox[3] - bbox[1]
             
@@ -1755,7 +1798,7 @@ async def add_caption_to_image(
             y = img_height - text_height - 20  # 20 pixels from bottom
             logger.info(f"Bottom caption position: ({x}, {y})")
             
-            draw_text_with_stroke(bottom_caption, (x, y), font, text_color, stroke_color, stroke_width)
+            draw_text_with_stroke(bottom_caption, (x, y), font_bottom, text_color, stroke_color, stroke_width)
             logger.info("Bottom caption added")
         
         # Convert back to base64
