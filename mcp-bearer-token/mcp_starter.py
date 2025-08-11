@@ -11,6 +11,7 @@ from mcp.types import TextContent, ImageContent, INVALID_PARAMS, INTERNAL_ERROR
 from pydantic import BaseModel, Field, AnyUrl
 
 import markdownify
+from textwrap import dedent
 import httpx
 import readabilipy
 import json
@@ -367,6 +368,30 @@ async def validate() -> str:
     logger.info(f"Returning MY_NUMBER: {MY_NUMBER}")
     return MY_NUMBER
 
+# --- Tool: about ---
+@mcp.tool
+async def about() -> dict[str, str]:
+    """Return server name and description for MemeChat MCP."""
+    logger.info("Tool called: about()")
+    server_name = "MemeChat MCP"
+    server_description = dedent(
+        """
+        MemeChat MCP focuses on meme creation and image captioning.
+        It provides tools to:
+        - create memes using Imgflip templates with AI-generated captions,
+        - turn screenshots into memes,
+        - add captions to user images,
+        - convert images to black and white.
+
+        It uses Gemini for caption generation and supports Gen Z style with optional Hinglish.
+        """
+    ).strip()
+
+    return {
+        "name": server_name,
+        "description": server_description,
+    }
+
 # --- Tool: job_finder (now smart!) ---
 JobFinderDescription = RichToolDescription(
     description="Smart job tool: analyze descriptions, fetch URLs, or search jobs based on free text.",
@@ -574,6 +599,7 @@ async def create_imgflip_meme(
                - What specific captions about "{prompt}" would be hilarious with this template?
             
             Return a comprehensive analysis that includes specific information about text areas and placement, with emphasis on how to make "{prompt}" the central focus of the meme.
+            NO EMOJIS.
             """
             
             template_analysis_content = types.Content(parts=[
@@ -660,6 +686,7 @@ async def create_imgflip_meme(
         - Be appropriate for the target audience and context
         
         CRITICAL: Your captions MUST be about "{prompt}" and work with the template's visual elements. Do not create generic captions - make them specific to "{prompt}" and what's happening in this template image.
+        DO NOT USE ANY EMOJIS. NO EMOJIS.
         
         Based on the template analysis, determine the appropriate caption format and return:
         
@@ -776,7 +803,7 @@ async def create_imgflip_meme(
                 logger.info("Meme image downloaded and converted to base64")
                 
                 # Return both text info and the image
-                text_info = f"🎭 **Meme Created Successfully!**\n\n**Template**: {selected_template['name']}\n**Top Text**: {top_text}\n**Bottom Text**: {bottom_text}"
+                text_info = f"Meme Created Successfully!\n\n**Template**: {selected_template['name']}\n**Top Text**: {top_text}\n**Bottom Text**: {bottom_text}"
                 
                 return [
                     TextContent(type="text", text=text_info),
@@ -1201,10 +1228,10 @@ async def job_finder(
     if job_description:
         logger.info("Processing job description analysis...")
         result = (
-            f"📝 **Job Description Analysis**\n\n"
+            f"Job Description Analysis\n\n"
             f"---\n{job_description.strip()}\n---\n\n"
             f"User Goal: **{user_goal}**\n\n"
-            f"💡 Suggestions:\n- Tailor your resume.\n- Evaluate skill match.\n- Consider applying if relevant."
+            f"Suggestions:\n- Tailor your resume.\n- Evaluate skill match.\n- Consider applying if relevant."
         )
         logger.info("Job description analysis completed")
         return result
@@ -1214,7 +1241,7 @@ async def job_finder(
         content, _ = await Fetch.fetch_url(str(job_url), Fetch.USER_AGENT, force_raw=raw)
         logger.info("Job posting fetched successfully")
         return (
-            f"🔗 **Fetched Job Posting from URL**: {job_url}\n\n"
+            f"Fetched Job Posting from URL: {job_url}\n\n"
             f"---\n{content.strip()}\n---\n\n"
             f"User Goal: **{user_goal}**"
         )
@@ -1224,7 +1251,7 @@ async def job_finder(
         links = await Fetch.google_search_links(user_goal)
         logger.info(f"Found {len(links)} job links")
         return (
-            f"🔍 **Search Results for**: _{user_goal}_\n\n" +
+            f"Search Results for: _{user_goal}_\n\n" +
             "\n".join(f"- {link}" for link in links)
         )
 
